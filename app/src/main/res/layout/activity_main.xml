@@ -6,13 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/fototop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ufg_2" />
+
+        <TextView
+            android:id="@+id/tituloufg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fototop"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="Universidad Francisco Gavidia"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/subtituloufg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloufg"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:fontFamily="monospace"
+            android:text="Registro de nuevo estudiante"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtituloufg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="*Nombre"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txt_nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textoNombre"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="40dp"
+            android:hint="Nombres" />
+
+        <TextView
+            android:id="@+id/textoApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nombres"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="*Apellido"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txt_apellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textoApellido"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="40dp"
+            android:hint="Apellidos " />
+
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_apellidos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="*Email"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtemail"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="40dp"
+            android:hint="Apellidos " />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtemail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Guardar"/>
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
